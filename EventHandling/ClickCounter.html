@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Click Counter</title>
+    <style>
+        #counterDisplay {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="clickBtn">Click Me</button>
+    <div id="counterDisplay">You clicked 0 times</div>
+
+    <script>
+        let count = 0;
+        const button = document.getElementById('clickBtn');
+        const display = document.getElementById('counterDisplay');
+
+        button.addEventListener('click', function () {
+            count++;
+            display.textContent = `You clicked ${count} ${count === 1 ? 'time' : 'times'}`;
+        });
+    </script>
+
+</body>
+
+</html>

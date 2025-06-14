@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Show & Hide Paragraph</title>
+</head>
+
+<body>
+
+    <button id="toggleBtn">Show Paragraph</button>
+    <div id="container"></div>
+
+    <script>
+        const button = document.getElementById('toggleBtn');
+        const container = document.getElementById('container');
+
+        const paragraph = document.createElement('p');
+        paragraph.textContent = 'Hello My Name is Omkar Nitin Dhadve';
+
+        let isParagraphVisible = false;
+
+        button.addEventListener('click', function () {
+            if (!isParagraphVisible) {
+                container.appendChild(paragraph);
+                button.textContent = 'Hide Paragraph';
+                isParagraphVisible = true;
+            } else {
+                container.removeChild(paragraph);
+                button.textContent = 'Show Paragraph';
+                isParagraphVisible = false;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

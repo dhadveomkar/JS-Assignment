@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Alert</title>
+    <script>
+        function showName(event) {
+            event.preventDefault();
+
+            var first = document.getElementById("firstName").value;
+            var last = document.getElementById("lastName").value;
+
+            alert("First Name: " + first + "\nLast Name: " + last);
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>User Form</h2>
+    <form onsubmit="showName(event)">
+        First Name: <input type="text" id="firstName" required><br><br>
+        Last Name: <input type="text" id="lastName" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+</html>
